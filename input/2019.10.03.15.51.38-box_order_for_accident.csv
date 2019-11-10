@@ -1,0 +1,3 @@
+insert_job,job_type,owner,permission,date_conditions,run_calendar,condition,days_of_week,exclude_calendar,start_times,description,alarm_if_fail,application,
+US.ANA01100.BOX, BOX,autosys,"gx,ge,wx",0,null,s(US.ANA01001.BOX),null,null,null,"ETL jobs for fdb_core_accident_dtl_fact",1,ANA,
+US.ANA01402.BOX, BOX,autosys,"gx,ge,wx",0,null,s(US.ANA01001.BOX),null,null,null,"ETL jobs for fdb_core_summary_client_product_count",1,ANA,
