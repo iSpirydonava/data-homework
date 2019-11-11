@@ -1,6 +1,16 @@
-FROM streamsets/datacollector:3.9.1
-# My custom configured sdc.properties
-RUN mkdir /input 
-COPY /input /input
+FROM alpine:latest
+USER root
 
-docker run -d -P --name streamsets-dc streamsets/datacollector
+RUN mkdir /input 
+RUN mkdir /content
+
+COPY /input /input
+copy test.json /content
+
+RUN echo "Hello World!!"
+
+FROM streamsets/datacollector:latest
+USER root
+
+COPY --chown=sdc:sdc --from=0 /content .
+
